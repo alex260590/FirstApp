@@ -15,11 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var myLabel: UILabel!
     
     @IBAction func buttonHomeTap(_ sender: Any) {
-        
+        //counter
         buttonHomeCount = buttonHomeCount + 1
         
         print (buttonHomeCount)
-        
+        //if statement
         if buttonHomeCount > 10 {
             view.backgroundColor = UIColor.red
             myLabel.text = "OK STOP! :/"
