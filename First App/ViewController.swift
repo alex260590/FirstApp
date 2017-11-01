@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     }
     //Back button
     @IBAction func buttonHomeBack(_ sender: Any) {
+        //changing colour to white
         view.backgroundColor = UIColor.white
         myLabel.text = "Hello Alex"
         buttonHomeCount = 0
