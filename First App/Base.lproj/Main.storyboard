@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,33 +24,57 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PW7-1H-odI">
-                                <rect key="frame" x="143.5" y="444" width="88" height="30"/>
+                                <rect key="frame" x="143.5" y="404" width="88" height="30"/>
                                 <state key="normal" title="Hit me bitch!"/>
                                 <connections>
                                     <action selector="buttonHomeTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aqL-Wr-dMd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HI-bm-ztQ">
-                                <rect key="frame" x="170.5" y="494" width="34" height="30"/>
+                                <rect key="frame" x="170.5" y="454" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="buttonHomeBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TJX-qx-p3O"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lJb-xv-iJ9">
+                                <rect key="frame" x="137.5" y="193" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="3nm-8p-z2j"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="egz-qT-XC5">
+                                <rect key="frame" x="137.5" y="138" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="XFQ-bc-Vgl"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="lJb-xv-iJ9" firstAttribute="top" secondItem="egz-qT-XC5" secondAttribute="bottom" constant="25" id="2A5-Em-NMS"/>
                             <constraint firstItem="Hbc-aL-DnC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Bw9-AC-4FF"/>
                             <constraint firstItem="1HI-bm-ztQ" firstAttribute="top" secondItem="PW7-1H-odI" secondAttribute="bottom" constant="20" id="OfI-sR-gCs"/>
                             <constraint firstItem="PW7-1H-odI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UXx-oZ-Xas"/>
-                            <constraint firstItem="PW7-1H-odI" firstAttribute="top" secondItem="Hbc-aL-DnC" secondAttribute="bottom" constant="100" id="bCu-Wy-FnW"/>
+                            <constraint firstItem="Hbc-aL-DnC" firstAttribute="top" secondItem="lJb-xv-iJ9" secondAttribute="bottom" constant="100" id="a91-br-xvQ"/>
+                            <constraint firstItem="PW7-1H-odI" firstAttribute="top" secondItem="Hbc-aL-DnC" secondAttribute="bottom" constant="60" id="bCu-Wy-FnW"/>
                             <constraint firstItem="1HI-bm-ztQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d0D-fP-CF0"/>
                             <constraint firstItem="Hbc-aL-DnC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h9K-4H-OyI"/>
+                            <constraint firstItem="lJb-xv-iJ9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hxv-YC-vti"/>
+                            <constraint firstItem="egz-qT-XC5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sxE-Um-lbf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bottomTextField" destination="lJb-xv-iJ9" id="Tn3-6H-NKB"/>
                         <outlet property="myLabel" destination="Hbc-aL-DnC" id="Gu5-1X-5CB"/>
+                        <outlet property="topTextField" destination="egz-qT-XC5" id="bVb-wR-V6a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

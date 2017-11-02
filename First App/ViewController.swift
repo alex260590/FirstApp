@@ -14,20 +14,29 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var myLabel: UILabel!
     
+    @IBOutlet weak var topTextField: UITextField!
+    @IBOutlet weak var bottomTextField: UITextField!
+    
     @IBAction func buttonHomeTap(_ sender: Any) {
+        
+        print(topTextField.text!)
+        print(bottomTextField.text!)
+        
+        /*
         //counter
         buttonHomeCount = buttonHomeCount + 1
-        
         print (buttonHomeCount)
         //if statement
         if buttonHomeCount > 10 {
             view.backgroundColor = UIColor.red
             myLabel.text = "OK STOP! :/"
         }
-        
+        */
     }
+
     //Back button
     @IBAction func buttonHomeBack(_ sender: Any) {
+        //changing colour to white
         view.backgroundColor = UIColor.white
         myLabel.text = "Hello Alex"
         buttonHomeCount = 0
