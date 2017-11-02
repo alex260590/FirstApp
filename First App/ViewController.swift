@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     @IBAction func buttonHomeTap(_ sender: Any) {
         
-        print(topTextField.text!)
+        print(topTextField.text!,bottomTextField.text!)
         print(bottomTextField.text!)
         
         /*
